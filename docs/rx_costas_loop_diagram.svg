@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="900" viewBox="0 0 1500 900">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#263238"/>
+    </marker>
+    <style>
+      .title { font: 700 30px "Microsoft YaHei", "Noto Sans CJK SC", Arial, sans-serif; fill: #102027; }
+      .subtitle { font: 16px "Microsoft YaHei", "Noto Sans CJK SC", Arial, sans-serif; fill: #546e7a; }
+      .box { fill: #f8fbfd; stroke: #34515e; stroke-width: 2; rx: 8; }
+      .box-blue { fill: #e3f2fd; stroke: #1565c0; stroke-width: 2; rx: 8; }
+      .box-green { fill: #e8f5e9; stroke: #2e7d32; stroke-width: 2; rx: 8; }
+      .box-orange { fill: #fff3e0; stroke: #ef6c00; stroke-width: 2; rx: 8; }
+      .box-red { fill: #ffebee; stroke: #c62828; stroke-width: 2; rx: 8; }
+      .box-purple { fill: #f3e5f5; stroke: #6a1b9a; stroke-width: 2; rx: 8; }
+      .note { fill: #ffffff; stroke: #90a4ae; stroke-width: 1.5; rx: 8; }
+      .label { font: 700 17px "Microsoft YaHei", "Noto Sans CJK SC", Arial, sans-serif; fill: #102027; }
+      .small { font: 14px "Microsoft YaHei", "Noto Sans CJK SC", Arial, sans-serif; fill: #263238; }
+      .tiny { font: 12px "Microsoft YaHei", "Noto Sans CJK SC", Arial, sans-serif; fill: #455a64; }
+      .wire { stroke: #263238; stroke-width: 2.4; fill: none; marker-end: url(#arrow); }
+      .wire-soft { stroke: #607d8b; stroke-width: 2; fill: none; marker-end: url(#arrow); }
+      .feedback { stroke: #c62828; stroke-width: 2.8; fill: none; marker-end: url(#arrow); }
+      .axis { stroke: #b0bec5; stroke-width: 1.2; }
+      .dash { stroke-dasharray: 8 6; }
+    </style>
+  </defs>
+
+  <rect width="1500" height="900" fill="#ffffff"/>
+  <text x="58" y="58" class="title">RX 接收端 Costas 载波同步环路示意图</text>
+  <text x="60" y="86" class="subtitle">对应 qpsk_stream_demo: ADC → 本振混频 → 匹配滤波 → 鉴相 → PI 环路滤波 → 相位反馈 DDS</text>
+
+  <rect x="55" y="150" width="145" height="82" class="box"/>
+  <text x="88" y="184" class="label">ADC 输入</text>
+  <text x="78" y="210" class="small">i_adc_signal</text>
+
+  <rect x="250" y="100" width="190" height="105" class="box-blue"/>
+  <text x="292" y="134" class="label">RX DDS / NCO</text>
+  <text x="275" y="160" class="small">dds_demo_cos_fix</text>
+  <text x="276" y="184" class="small">dds_demo_sin_fix</text>
+
+  <rect x="260" y="238" width="170" height="76" class="note"/>
+  <text x="279" y="267" class="small">相位输入</text>
+  <text x="280" y="291" class="tiny">{32'hFFFF_FFFF - phase_detect, nco_word}</text>
+
+  <rect x="500" y="110" width="170" height="80" class="box-orange"/>
+  <text x="545" y="143" class="label">I 路混频</text>
+  <text x="535" y="168" class="small">ADC × cos</text>
+
+  <rect x="500" y="230" width="170" height="80" class="box-orange"/>
+  <text x="545" y="263" class="label">Q 路混频</text>
+  <text x="535" y="288" class="small">ADC × sin</text>
+
+  <rect x="735" y="110" width="178" height="80" class="box-green"/>
+  <text x="771" y="143" class="label">I 路 RRC/FIR</text>
+  <text x="768" y="168" class="small">demo_filtered_I</text>
+
+  <rect x="735" y="230" width="178" height="80" class="box-green"/>
+  <text x="771" y="263" class="label">Q 路 RRC/FIR</text>
+  <text x="768" y="288" class="small">demo_filtered_Q</text>
+
+  <rect x="985" y="160" width="210" height="105" class="box-red"/>
+  <text x="1027" y="195" class="label">QPSK 鉴相器</text>
+  <text x="1016" y="221" class="small">phase_detector_fix</text>
+  <text x="1018" y="245" class="tiny">phase_error = sign(I)·Q - sign(Q)·I</text>
+
+  <rect x="1260" y="150" width="190" height="125" class="box-purple"/>
+  <text x="1303" y="185" class="label">Costas PI</text>
+  <text x="1288" y="211" class="small">costas_loopfilter_fix</text>
+  <text x="1285" y="237" class="tiny">pd_sub = c1·Δe + c2·e</text>
+  <text x="1285" y="258" class="tiny">pd = pd + pd_sub</text>
+
+  <rect x="1065" y="355" width="330" height="118" class="note"/>
+  <text x="1089" y="386" class="label">PI 系数含义</text>
+  <text x="1090" y="414" class="small">CAPTURE_C1_SHIFT / TRACK_C1_SHIFT: 比例/阻尼项</text>
+  <text x="1090" y="440" class="small">CAPTURE_C2_SHIFT / TRACK_C2_SHIFT: 积分/频偏校正项</text>
+  <text x="1090" y="464" class="tiny">参数值 N 表示系数 2^-N</text>
+
+  <rect x="735" y="455" width="220" height="92" class="box"/>
+  <text x="780" y="489" class="label">Gardner 定时恢复</text>
+  <text x="770" y="515" class="small">gardner_sync</text>
+
+  <rect x="1010" y="455" width="160" height="92" class="box"/>
+  <text x="1043" y="489" class="label">判决输出</text>
+  <text x="1036" y="515" class="small">o_demo_bits</text>
+
+  <rect x="60" y="620" width="420" height="170" class="note"/>
+  <text x="86" y="654" class="label">下板建议观察点</text>
+  <text x="88" y="686" class="small">1. o_dbg_pd / phase_detect: 是否为稳定斜坡</text>
+  <text x="88" y="716" class="small">2. phase_error: 均值是否接近 0，是否有拍频</text>
+  <text x="88" y="746" class="small">3. demo_filtered_I/Q: 星座是否稳定、是否偏心</text>
+  <text x="88" y="776" class="small">4. o_dbg_strobe: 定时恢复是否滑动</text>
+
+  <rect x="550" y="620" width="420" height="170" class="note"/>
+  <text x="576" y="654" class="label">典型波形判断</text>
+  <text x="578" y="686" class="small">PD 斜坡周期 Tpd: 频偏 |Δf| = 1 / Tpd</text>
+  <text x="578" y="716" class="small">PD 慢漂残留: 优先增大 c2</text>
+  <text x="578" y="746" class="small">PD 高频抖动: 优先减小 c1</text>
+  <text x="578" y="776" class="small">phase_error 有拍频: 先查干扰/镜像/DC</text>
+
+  <rect x="1040" y="620" width="390" height="170" class="note"/>
+  <text x="1066" y="654" class="label">反馈方向</text>
+  <text x="1068" y="686" class="small">phase_detect 输出给 DDS 相位端</text>
+  <text x="1068" y="716" class="small">代码中使用 32'hFFFF_FFFF - phase_detect</text>
+  <text x="1068" y="746" class="small">所以 PD 斜坡方向与 DDS 校正方向相反</text>
+  <text x="1068" y="776" class="small">QPSK 存在 90° 相位模糊，需结合映射判断</text>
+
+  <line x1="200" y1="191" x2="488" y2="150" class="wire"/>
+  <line x1="200" y1="191" x2="488" y2="270" class="wire"/>
+  <line x1="440" y1="142" x2="488" y2="142" class="wire-soft"/>
+  <line x1="440" y1="178" x2="488" y2="258" class="wire-soft"/>
+  <text x="456" y="126" class="tiny">cos</text>
+  <text x="456" y="238" class="tiny">sin</text>
+
+  <line x1="670" y1="150" x2="723" y2="150" class="wire"/>
+  <line x1="670" y1="270" x2="723" y2="270" class="wire"/>
+  <line x1="913" y1="150" x2="972" y2="193" class="wire"/>
+  <line x1="913" y1="270" x2="972" y2="233" class="wire"/>
+  <line x1="1195" y1="213" x2="1248" y2="213" class="wire"/>
+  <text x="1205" y="198" class="tiny">phase_error</text>
+
+  <path d="M1355 150 C1355 72 345 58 345 92" class="feedback"/>
+  <text x="820" y="64" class="small" fill="#c62828">phase_detect / o_dbg_pd 反馈校正本振相位</text>
+
+  <line x1="824" y1="310" x2="824" y2="443" class="wire-soft"/>
+  <line x1="840" y1="310" x2="840" y2="443" class="wire-soft"/>
+  <line x1="955" y1="501" x2="998" y2="501" class="wire"/>
+
+  <line x1="315" y1="205" x2="315" y2="234" class="wire-soft"/>
+  <line x1="375" y1="238" x2="375" y2="206" class="wire-soft"/>
+
+  <line x1="55" y1="575" x2="1450" y2="575" class="axis"/>
+  <text x="58" y="602" class="subtitle">说明：上半部分是实时数据/反馈路径，下半部分是 ILA 调试观察建议。</text>
+</svg>

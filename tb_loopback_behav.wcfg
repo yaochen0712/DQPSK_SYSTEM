@@ -1,0 +1,671 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_loopback_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_loopback" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="1.455000 us"></ZoomStartTime>
+      <ZoomEndTime time="25.285001 us"></ZoomEndTime>
+      <Cursor1Time time="7.995000 us"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="232"></NameColumnWidth>
+      <ValueColumnWidth column_width="126"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="22" />
+   <wvobject fp_name="/tb_loopback/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_loopback/rst_n" type="logic">
+      <obj_property name="ElementShortName">rst_n</obj_property>
+      <obj_property name="ObjectShortName">rst_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_loopback/sample_tick" type="logic">
+      <obj_property name="ElementShortName">sample_tick</obj_property>
+      <obj_property name="ObjectShortName">sample_tick</obj_property>
+      <obj_property name="CustomSignalColor">#D2691E</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_loopback/bit_input" type="logic">
+      <obj_property name="ElementShortName">bit_input</obj_property>
+      <obj_property name="ObjectShortName">bit_input</obj_property>
+      <obj_property name="CustomSignalColor">#D2691E</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_loopback/bit_decode_valid" type="logic">
+      <obj_property name="ElementShortName">bit_decode_valid</obj_property>
+      <obj_property name="ObjectShortName">bit_decode_valid</obj_property>
+      <obj_property name="CustomSignalColor">#E0FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_loopback/bit_rx" type="logic">
+      <obj_property name="ElementShortName">bit_rx</obj_property>
+      <obj_property name="ObjectShortName">bit_rx</obj_property>
+      <obj_property name="CustomSignalColor">#E0FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_loopback/tx_error" type="logic">
+      <obj_property name="ElementShortName">tx_error</obj_property>
+      <obj_property name="ObjectShortName">tx_error</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_loopback/tx_nco_freq" type="array">
+      <obj_property name="ElementShortName">tx_nco_freq[31:0]</obj_property>
+      <obj_property name="ObjectShortName">tx_nco_freq[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_loopback/rx_nco_freq" type="array">
+      <obj_property name="ElementShortName">rx_nco_freq[31:0]</obj_property>
+      <obj_property name="ObjectShortName">rx_nco_freq[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_loopback/dac_data" type="array">
+      <obj_property name="ElementShortName">dac_data[13:0]</obj_property>
+      <obj_property name="ObjectShortName">dac_data[13:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
+      <obj_property name="AnalogYRangeType">ANALOG_YRANGETYPE_AUTO</obj_property>
+      <obj_property name="AnalogYRangeMin">0.000000</obj_property>
+      <obj_property name="AnalogYRRangeMax">0.000000</obj_property>
+      <obj_property name="AnalogInterpolation">ANALOG_INTERPOLATION_HOLD</obj_property>
+      <obj_property name="AnalogOffscale">ANALOG_OFFSCALE_HIDE</obj_property>
+      <obj_property name="AnalogHorizLine">0.000000</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_loopback/adc_data" type="array">
+      <obj_property name="ElementShortName">adc_data[15:0]</obj_property>
+      <obj_property name="ObjectShortName">adc_data[15:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
+      <obj_property name="AnalogYRangeType">ANALOG_YRANGETYPE_AUTO</obj_property>
+      <obj_property name="AnalogYRangeMin">0.000000</obj_property>
+      <obj_property name="AnalogYRRangeMax">0.000000</obj_property>
+      <obj_property name="AnalogInterpolation">ANALOG_INTERPOLATION_HOLD</obj_property>
+      <obj_property name="AnalogOffscale">ANALOG_OFFSCALE_HIDE</obj_property>
+      <obj_property name="AnalogHorizLine">0.000000</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_loopback/rx_error" type="logic">
+      <obj_property name="ElementShortName">rx_error</obj_property>
+      <obj_property name="ObjectShortName">rx_error</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_loopback/SEED" type="array">
+      <obj_property name="ElementShortName">SEED[31:0]</obj_property>
+      <obj_property name="ObjectShortName">SEED[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_loopback/NCO_BIAS" type="array">
+      <obj_property name="ElementShortName">NCO_BIAS[31:0]</obj_property>
+      <obj_property name="ObjectShortName">NCO_BIAS[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="group41" type="group">
+      <obj_property name="label">RX_Coded_stream</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/tb_loopback/dut_rx/coded_valid" type="logic">
+         <obj_property name="ElementShortName">coded_valid</obj_property>
+         <obj_property name="ObjectShortName">coded_valid</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group44" type="group">
+      <obj_property name="label">TX_Coded_stream</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/tb_loopback/dut/coded_valid" type="logic">
+         <obj_property name="ElementShortName">coded_valid</obj_property>
+         <obj_property name="ObjectShortName">coded_valid</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group47" type="group">
+      <obj_property name="label">TX_IQ</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/tb_loopback/dut_rx/u_qpsk_stream_demo/demo_filtered_I" type="array">
+         <obj_property name="ElementShortName">demo_filtered_I[42:0]</obj_property>
+         <obj_property name="ObjectShortName">demo_filtered_I[42:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         <obj_property name="CellHeight">100</obj_property>
+         <obj_property name="AnalogYRangeType">ANALOG_YRANGETYPE_AUTO</obj_property>
+         <obj_property name="AnalogYRangeMin">0.000000</obj_property>
+         <obj_property name="AnalogYRRangeMax">0.000000</obj_property>
+         <obj_property name="AnalogInterpolation">ANALOG_INTERPOLATION_HOLD</obj_property>
+         <obj_property name="AnalogOffscale">ANALOG_OFFSCALE_HIDE</obj_property>
+         <obj_property name="AnalogHorizLine">0.000000</obj_property>
+         <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_loopback/dut_rx/u_qpsk_stream_demo/demo_filtered_Q" type="array">
+         <obj_property name="ElementShortName">demo_filtered_Q[42:0]</obj_property>
+         <obj_property name="ObjectShortName">demo_filtered_Q[42:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         <obj_property name="CellHeight">100</obj_property>
+         <obj_property name="AnalogYRangeType">ANALOG_YRANGETYPE_AUTO</obj_property>
+         <obj_property name="AnalogYRangeMin">0.000000</obj_property>
+         <obj_property name="AnalogYRRangeMax">0.000000</obj_property>
+         <obj_property name="AnalogInterpolation">ANALOG_INTERPOLATION_HOLD</obj_property>
+         <obj_property name="AnalogOffscale">ANALOG_OFFSCALE_HIDE</obj_property>
+         <obj_property name="AnalogHorizLine">0.000000</obj_property>
+         <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_loopback/dut_rx/u_qpsk_stream_demo/gardner_sync_inst/gardner_ted_inst/wn_init_val" type="array">
+         <obj_property name="ElementShortName">wn_init_val[15:0]</obj_property>
+         <obj_property name="ObjectShortName">wn_init_val[15:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_loopback/dut_rx/u_qpsk_stream_demo/sync_flag" type="logic">
+         <obj_property name="ElementShortName">sync_flag</obj_property>
+         <obj_property name="ObjectShortName">sync_flag</obj_property>
+         <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_loopback/dut_rx/u_qpsk_stream_demo/sync_I" type="logic">
+         <obj_property name="ElementShortName">sync_I</obj_property>
+         <obj_property name="ObjectShortName">sync_I</obj_property>
+         <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_loopback/dut_rx/u_qpsk_stream_demo/sync_Q" type="logic">
+         <obj_property name="ElementShortName">sync_Q</obj_property>
+         <obj_property name="ObjectShortName">sync_Q</obj_property>
+         <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group48" type="group">
+      <obj_property name="label">DDS</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/tb_loopback/dut_rx/u_qpsk_stream_demo/nco_sin" type="array">
+         <obj_property name="ElementShortName">nco_sin[7:0]</obj_property>
+         <obj_property name="ObjectShortName">nco_sin[7:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         <obj_property name="CellHeight">100</obj_property>
+         <obj_property name="AnalogYRangeType">ANALOG_YRANGETYPE_AUTO</obj_property>
+         <obj_property name="AnalogYRangeMin">0.000000</obj_property>
+         <obj_property name="AnalogYRRangeMax">0.000000</obj_property>
+         <obj_property name="AnalogInterpolation">ANALOG_INTERPOLATION_HOLD</obj_property>
+         <obj_property name="AnalogOffscale">ANALOG_OFFSCALE_HIDE</obj_property>
+         <obj_property name="AnalogHorizLine">0.000000</obj_property>
+         <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_loopback/dut_rx/u_qpsk_stream_demo/nco_cos" type="array">
+         <obj_property name="ElementShortName">nco_cos[7:0]</obj_property>
+         <obj_property name="ObjectShortName">nco_cos[7:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         <obj_property name="CellHeight">100</obj_property>
+         <obj_property name="AnalogYRangeType">ANALOG_YRANGETYPE_AUTO</obj_property>
+         <obj_property name="AnalogYRangeMin">0.000000</obj_property>
+         <obj_property name="AnalogYRRangeMax">0.000000</obj_property>
+         <obj_property name="AnalogInterpolation">ANALOG_INTERPOLATION_HOLD</obj_property>
+         <obj_property name="AnalogOffscale">ANALOG_OFFSCALE_HIDE</obj_property>
+         <obj_property name="AnalogHorizLine">0.000000</obj_property>
+         <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group60" type="group">
+      <obj_property name="label">GARDNER</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/tb_loopback/dut_rx/u_qpsk_stream_demo/gardner_sync_inst/clk" type="logic">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_loopback/dut_rx/u_qpsk_stream_demo/gardner_sync_inst/rst_n" type="logic">
+         <obj_property name="ElementShortName">rst_n</obj_property>
+         <obj_property name="ObjectShortName">rst_n</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_loopback/dut_rx/u_qpsk_stream_demo/gardner_sync_inst/data_in_I" type="array">
+         <obj_property name="ElementShortName">data_in_I[14:0]</obj_property>
+         <obj_property name="ObjectShortName">data_in_I[14:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         <obj_property name="CellHeight">100</obj_property>
+         <obj_property name="AnalogYRangeType">ANALOG_YRANGETYPE_AUTO</obj_property>
+         <obj_property name="AnalogYRangeMin">0.000000</obj_property>
+         <obj_property name="AnalogYRRangeMax">0.000000</obj_property>
+         <obj_property name="AnalogInterpolation">ANALOG_INTERPOLATION_HOLD</obj_property>
+         <obj_property name="AnalogOffscale">ANALOG_OFFSCALE_HIDE</obj_property>
+         <obj_property name="AnalogHorizLine">0.000000</obj_property>
+         <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_loopback/dut_rx/u_qpsk_stream_demo/gardner_sync_inst/data_in_Q" type="array">
+         <obj_property name="ElementShortName">data_in_Q[14:0]</obj_property>
+         <obj_property name="ObjectShortName">data_in_Q[14:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         <obj_property name="CellHeight">100</obj_property>
+         <obj_property name="AnalogYRangeType">ANALOG_YRANGETYPE_AUTO</obj_property>
+         <obj_property name="AnalogYRangeMin">0.000000</obj_property>
+         <obj_property name="AnalogYRRangeMax">0.000000</obj_property>
+         <obj_property name="AnalogInterpolation">ANALOG_INTERPOLATION_HOLD</obj_property>
+         <obj_property name="AnalogOffscale">ANALOG_OFFSCALE_HIDE</obj_property>
+         <obj_property name="AnalogHorizLine">0.000000</obj_property>
+         <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_loopback/dut_rx/u_qpsk_stream_demo/gardner_sync_inst/sync_out_I" type="logic">
+         <obj_property name="ElementShortName">sync_out_I</obj_property>
+         <obj_property name="ObjectShortName">sync_out_I</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_loopback/dut_rx/u_qpsk_stream_demo/gardner_sync_inst/sync_out_Q" type="logic">
+         <obj_property name="ElementShortName">sync_out_Q</obj_property>
+         <obj_property name="ObjectShortName">sync_out_Q</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_loopback/dut_rx/u_qpsk_stream_demo/gardner_sync_inst/sync_flag" type="logic">
+         <obj_property name="ElementShortName">sync_flag</obj_property>
+         <obj_property name="ObjectShortName">sync_flag</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_loopback/dut_rx/u_qpsk_stream_demo/gardner_sync_inst/uk" type="array">
+         <obj_property name="ElementShortName">uk[15:0]</obj_property>
+         <obj_property name="ObjectShortName">uk[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_loopback/dut_rx/u_qpsk_stream_demo/gardner_sync_inst/wn" type="array">
+         <obj_property name="ElementShortName">wn[15:0]</obj_property>
+         <obj_property name="ObjectShortName">wn[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_loopback/dut_rx/u_qpsk_stream_demo/gardner_sync_inst/strobe_flag" type="logic">
+         <obj_property name="ElementShortName">strobe_flag</obj_property>
+         <obj_property name="ObjectShortName">strobe_flag</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_loopback/dut_rx/u_qpsk_stream_demo/gardner_sync_inst/OVSAMP_COEF" type="array">
+         <obj_property name="ElementShortName">OVSAMP_COEF[31:0]</obj_property>
+         <obj_property name="ObjectShortName">OVSAMP_COEF[31:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group110" type="group">
+      <obj_property name="label">Decoder</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/tb_loopback/dut_rx/u_rx_decoder/o_cover_valid" type="logic">
+         <obj_property name="ElementShortName">o_cover_valid</obj_property>
+         <obj_property name="ObjectShortName">o_cover_valid</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_loopback/dut_rx/u_rx_decoder/o_cover_data" type="logic">
+         <obj_property name="ElementShortName">o_cover_data</obj_property>
+         <obj_property name="ObjectShortName">o_cover_data</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_loopback/dut_rx/u_rx_decoder/protected_data" type="array">
+         <obj_property name="ElementShortName">protected_data[1:0]</obj_property>
+         <obj_property name="ObjectShortName">protected_data[1:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_loopback/clk" type="logic">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_loopback/dut_rx/u_rx_decoder/i_coded_data" type="array">
+         <obj_property name="ElementShortName">i_coded_data[1:0]</obj_property>
+         <obj_property name="ObjectShortName">i_coded_data[1:0]</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_loopback/dut_rx/u_rx_decoder/i_coded_valid" type="logic">
+         <obj_property name="ElementShortName">i_coded_valid</obj_property>
+         <obj_property name="ObjectShortName">i_coded_valid</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_loopback/dut_rx/u_rx_decoder/wait_finished" type="logic">
+         <obj_property name="ElementShortName">wait_finished</obj_property>
+         <obj_property name="ObjectShortName">wait_finished</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group134" type="group">
+      <obj_property name="label">CODED_PARRA</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/tb_loopback/dut/o_tst_IQ_data" type="array">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">o_tst_IQ_data[1:0]</obj_property>
+         <obj_property name="ObjectShortName">o_tst_IQ_data[1:0]</obj_property>
+         <obj_property name="label">o_tst_IQ_data[1:0]-TX</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_loopback/dut_rx/o_tst_IQ_data" type="array">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">o_tst_IQ_data[1:0]</obj_property>
+         <obj_property name="ObjectShortName">o_tst_IQ_data[1:0]</obj_property>
+         <obj_property name="label">o_tst_IQ_data[1:0]-RX</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+      </wvobject>
+      <wvobject fp_name="group216" type="group">
+         <obj_property name="label">THRESHOLD</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="/tb_loopback/dut_rx/u_qpsk_stream_demo/gardner_sync_inst/gardner_ted_inst/DECISION_THRESHOLD" type="array">
+            <obj_property name="ElementShortName">DECISION_THRESHOLD[19:0]</obj_property>
+            <obj_property name="ObjectShortName">DECISION_THRESHOLD[19:0]</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/tb_loopback/dut_rx/u_qpsk_stream_demo/gardner_sync_inst/gardner_ted_inst/abs_interpolate_Q" type="array">
+            <obj_property name="ElementShortName">abs_interpolate_Q[19:0]</obj_property>
+            <obj_property name="ObjectShortName">abs_interpolate_Q[19:0]</obj_property>
+            <obj_property name="CellHeight">100</obj_property>
+            <obj_property name="AnalogYRangeType">ANALOG_YRANGETYPE_AUTO</obj_property>
+            <obj_property name="AnalogYRangeMin">0.000000</obj_property>
+            <obj_property name="AnalogYRRangeMax">0.000000</obj_property>
+            <obj_property name="AnalogInterpolation">ANALOG_INTERPOLATION_HOLD</obj_property>
+            <obj_property name="AnalogOffscale">ANALOG_OFFSCALE_HIDE</obj_property>
+            <obj_property name="AnalogHorizLine">0.000000</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/tb_loopback/dut_rx/u_qpsk_stream_demo/gardner_sync_inst/gardner_ted_inst/abs_interpolate_I" type="array">
+            <obj_property name="ElementShortName">abs_interpolate_I[19:0]</obj_property>
+            <obj_property name="ObjectShortName">abs_interpolate_I[19:0]</obj_property>
+            <obj_property name="CellHeight">100</obj_property>
+            <obj_property name="AnalogYRangeType">ANALOG_YRANGETYPE_AUTO</obj_property>
+            <obj_property name="AnalogYRangeMin">0.000000</obj_property>
+            <obj_property name="AnalogYRRangeMax">0.000000</obj_property>
+            <obj_property name="AnalogInterpolation">ANALOG_INTERPOLATION_HOLD</obj_property>
+            <obj_property name="AnalogOffscale">ANALOG_OFFSCALE_HIDE</obj_property>
+            <obj_property name="AnalogHorizLine">0.000000</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group114" type="group">
+      <obj_property name="label">interpolate</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/tb_loopback/dut_rx/u_qpsk_stream_demo/gardner_sync_inst/interpolate_filter_inst/clk" type="logic">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_loopback/dut_rx/u_qpsk_stream_demo/gardner_sync_inst/interpolate_filter_inst/rst_n" type="logic">
+         <obj_property name="ElementShortName">rst_n</obj_property>
+         <obj_property name="ObjectShortName">rst_n</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_loopback/dut_rx/u_qpsk_stream_demo/gardner_sync_inst/interpolate_filter_inst/data_in_I" type="array">
+         <obj_property name="ElementShortName">data_in_I[14:0]</obj_property>
+         <obj_property name="ObjectShortName">data_in_I[14:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_loopback/dut_rx/u_qpsk_stream_demo/gardner_sync_inst/interpolate_filter_inst/data_in_Q" type="array">
+         <obj_property name="ElementShortName">data_in_Q[14:0]</obj_property>
+         <obj_property name="ObjectShortName">data_in_Q[14:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_loopback/dut_rx/u_qpsk_stream_demo/gardner_sync_inst/interpolate_filter_inst/uk" type="array">
+         <obj_property name="ElementShortName">uk[15:0]</obj_property>
+         <obj_property name="ObjectShortName">uk[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_loopback/dut_rx/u_qpsk_stream_demo/gardner_sync_inst/interpolate_filter_inst/I_y" type="array">
+         <obj_property name="ElementShortName">I_y[19:0]</obj_property>
+         <obj_property name="ObjectShortName">I_y[19:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         <obj_property name="CellHeight">100</obj_property>
+         <obj_property name="AnalogYRangeType">ANALOG_YRANGETYPE_AUTO</obj_property>
+         <obj_property name="AnalogYRangeMin">0.000000</obj_property>
+         <obj_property name="AnalogYRRangeMax">0.000000</obj_property>
+         <obj_property name="AnalogInterpolation">ANALOG_INTERPOLATION_HOLD</obj_property>
+         <obj_property name="AnalogOffscale">ANALOG_OFFSCALE_HIDE</obj_property>
+         <obj_property name="AnalogHorizLine">0.000000</obj_property>
+         <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_loopback/dut_rx/u_qpsk_stream_demo/gardner_sync_inst/interpolate_filter_inst/Q_y" type="array">
+         <obj_property name="ElementShortName">Q_y[19:0]</obj_property>
+         <obj_property name="ObjectShortName">Q_y[19:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         <obj_property name="CellHeight">100</obj_property>
+         <obj_property name="AnalogYRangeType">ANALOG_YRANGETYPE_AUTO</obj_property>
+         <obj_property name="AnalogYRangeMin">0.000000</obj_property>
+         <obj_property name="AnalogYRRangeMax">0.000000</obj_property>
+         <obj_property name="AnalogInterpolation">ANALOG_INTERPOLATION_HOLD</obj_property>
+         <obj_property name="AnalogOffscale">ANALOG_OFFSCALE_HIDE</obj_property>
+         <obj_property name="AnalogHorizLine">0.000000</obj_property>
+         <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_loopback/dut_rx/u_qpsk_stream_demo/gardner_sync_inst/interpolate_filter_inst/data_in_I_d1" type="array">
+         <obj_property name="ElementShortName">data_in_I_d1[14:0]</obj_property>
+         <obj_property name="ObjectShortName">data_in_I_d1[14:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         <obj_property name="CellHeight">100</obj_property>
+         <obj_property name="AnalogYRangeType">ANALOG_YRANGETYPE_AUTO</obj_property>
+         <obj_property name="AnalogYRangeMin">0.000000</obj_property>
+         <obj_property name="AnalogYRRangeMax">0.000000</obj_property>
+         <obj_property name="AnalogInterpolation">ANALOG_INTERPOLATION_HOLD</obj_property>
+         <obj_property name="AnalogOffscale">ANALOG_OFFSCALE_HIDE</obj_property>
+         <obj_property name="AnalogHorizLine">0.000000</obj_property>
+         <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_loopback/dut_rx/u_qpsk_stream_demo/gardner_sync_inst/interpolate_filter_inst/data_in_I_d2" type="array">
+         <obj_property name="ElementShortName">data_in_I_d2[14:0]</obj_property>
+         <obj_property name="ObjectShortName">data_in_I_d2[14:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         <obj_property name="CellHeight">100</obj_property>
+         <obj_property name="AnalogYRangeType">ANALOG_YRANGETYPE_AUTO</obj_property>
+         <obj_property name="AnalogYRangeMin">0.000000</obj_property>
+         <obj_property name="AnalogYRRangeMax">0.000000</obj_property>
+         <obj_property name="AnalogInterpolation">ANALOG_INTERPOLATION_HOLD</obj_property>
+         <obj_property name="AnalogOffscale">ANALOG_OFFSCALE_HIDE</obj_property>
+         <obj_property name="AnalogHorizLine">0.000000</obj_property>
+         <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_loopback/dut_rx/u_qpsk_stream_demo/gardner_sync_inst/interpolate_filter_inst/data_in_I_d3" type="array">
+         <obj_property name="ElementShortName">data_in_I_d3[14:0]</obj_property>
+         <obj_property name="ObjectShortName">data_in_I_d3[14:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         <obj_property name="CellHeight">100</obj_property>
+         <obj_property name="AnalogYRangeType">ANALOG_YRANGETYPE_AUTO</obj_property>
+         <obj_property name="AnalogYRangeMin">0.000000</obj_property>
+         <obj_property name="AnalogYRRangeMax">0.000000</obj_property>
+         <obj_property name="AnalogInterpolation">ANALOG_INTERPOLATION_HOLD</obj_property>
+         <obj_property name="AnalogOffscale">ANALOG_OFFSCALE_HIDE</obj_property>
+         <obj_property name="AnalogHorizLine">0.000000</obj_property>
+         <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_loopback/dut_rx/u_qpsk_stream_demo/gardner_sync_inst/interpolate_filter_inst/data_in_Q_d1" type="array">
+         <obj_property name="ElementShortName">data_in_Q_d1[14:0]</obj_property>
+         <obj_property name="ObjectShortName">data_in_Q_d1[14:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         <obj_property name="CellHeight">100</obj_property>
+         <obj_property name="AnalogYRangeType">ANALOG_YRANGETYPE_AUTO</obj_property>
+         <obj_property name="AnalogYRangeMin">0.000000</obj_property>
+         <obj_property name="AnalogYRRangeMax">0.000000</obj_property>
+         <obj_property name="AnalogInterpolation">ANALOG_INTERPOLATION_HOLD</obj_property>
+         <obj_property name="AnalogOffscale">ANALOG_OFFSCALE_HIDE</obj_property>
+         <obj_property name="AnalogHorizLine">0.000000</obj_property>
+         <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_loopback/dut_rx/u_qpsk_stream_demo/gardner_sync_inst/interpolate_filter_inst/data_in_Q_d2" type="array">
+         <obj_property name="ElementShortName">data_in_Q_d2[14:0]</obj_property>
+         <obj_property name="ObjectShortName">data_in_Q_d2[14:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         <obj_property name="CellHeight">100</obj_property>
+         <obj_property name="AnalogYRangeType">ANALOG_YRANGETYPE_AUTO</obj_property>
+         <obj_property name="AnalogYRangeMin">0.000000</obj_property>
+         <obj_property name="AnalogYRRangeMax">0.000000</obj_property>
+         <obj_property name="AnalogInterpolation">ANALOG_INTERPOLATION_HOLD</obj_property>
+         <obj_property name="AnalogOffscale">ANALOG_OFFSCALE_HIDE</obj_property>
+         <obj_property name="AnalogHorizLine">0.000000</obj_property>
+         <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_loopback/dut_rx/u_qpsk_stream_demo/gardner_sync_inst/interpolate_filter_inst/data_in_Q_d3" type="array">
+         <obj_property name="ElementShortName">data_in_Q_d3[14:0]</obj_property>
+         <obj_property name="ObjectShortName">data_in_Q_d3[14:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         <obj_property name="CellHeight">100</obj_property>
+         <obj_property name="AnalogYRangeType">ANALOG_YRANGETYPE_AUTO</obj_property>
+         <obj_property name="AnalogYRangeMin">0.000000</obj_property>
+         <obj_property name="AnalogYRRangeMax">0.000000</obj_property>
+         <obj_property name="AnalogInterpolation">ANALOG_INTERPOLATION_HOLD</obj_property>
+         <obj_property name="AnalogOffscale">ANALOG_OFFSCALE_HIDE</obj_property>
+         <obj_property name="AnalogHorizLine">0.000000</obj_property>
+         <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_loopback/dut_rx/u_qpsk_stream_demo/gardner_sync_inst/interpolate_filter_inst/I_y_temp" type="array">
+         <obj_property name="ElementShortName">I_y_temp[19:0]</obj_property>
+         <obj_property name="ObjectShortName">I_y_temp[19:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         <obj_property name="CellHeight">100</obj_property>
+         <obj_property name="AnalogYRangeType">ANALOG_YRANGETYPE_AUTO</obj_property>
+         <obj_property name="AnalogYRangeMin">0.000000</obj_property>
+         <obj_property name="AnalogYRRangeMax">0.000000</obj_property>
+         <obj_property name="AnalogInterpolation">ANALOG_INTERPOLATION_HOLD</obj_property>
+         <obj_property name="AnalogOffscale">ANALOG_OFFSCALE_HIDE</obj_property>
+         <obj_property name="AnalogHorizLine">0.000000</obj_property>
+         <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_loopback/dut_rx/u_qpsk_stream_demo/gardner_sync_inst/interpolate_filter_inst/Q_y_temp" type="array">
+         <obj_property name="ElementShortName">Q_y_temp[19:0]</obj_property>
+         <obj_property name="ObjectShortName">Q_y_temp[19:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         <obj_property name="CellHeight">100</obj_property>
+         <obj_property name="AnalogYRangeType">ANALOG_YRANGETYPE_AUTO</obj_property>
+         <obj_property name="AnalogYRangeMin">0.000000</obj_property>
+         <obj_property name="AnalogYRRangeMax">0.000000</obj_property>
+         <obj_property name="AnalogInterpolation">ANALOG_INTERPOLATION_HOLD</obj_property>
+         <obj_property name="AnalogOffscale">ANALOG_OFFSCALE_HIDE</obj_property>
+         <obj_property name="AnalogHorizLine">0.000000</obj_property>
+         <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_loopback/dut_rx/u_qpsk_stream_demo/gardner_sync_inst/interpolate_filter_inst/f1_I" type="array">
+         <obj_property name="ElementShortName">f1_I[16:0]</obj_property>
+         <obj_property name="ObjectShortName">f1_I[16:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         <obj_property name="CellHeight">100</obj_property>
+         <obj_property name="AnalogYRangeType">ANALOG_YRANGETYPE_AUTO</obj_property>
+         <obj_property name="AnalogYRangeMin">0.000000</obj_property>
+         <obj_property name="AnalogYRRangeMax">0.000000</obj_property>
+         <obj_property name="AnalogInterpolation">ANALOG_INTERPOLATION_HOLD</obj_property>
+         <obj_property name="AnalogOffscale">ANALOG_OFFSCALE_HIDE</obj_property>
+         <obj_property name="AnalogHorizLine">0.000000</obj_property>
+         <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_loopback/dut_rx/u_qpsk_stream_demo/gardner_sync_inst/interpolate_filter_inst/f2_I" type="array">
+         <obj_property name="ElementShortName">f2_I[16:0]</obj_property>
+         <obj_property name="ObjectShortName">f2_I[16:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         <obj_property name="CellHeight">100</obj_property>
+         <obj_property name="AnalogYRangeType">ANALOG_YRANGETYPE_AUTO</obj_property>
+         <obj_property name="AnalogYRangeMin">0.000000</obj_property>
+         <obj_property name="AnalogYRRangeMax">0.000000</obj_property>
+         <obj_property name="AnalogInterpolation">ANALOG_INTERPOLATION_HOLD</obj_property>
+         <obj_property name="AnalogOffscale">ANALOG_OFFSCALE_HIDE</obj_property>
+         <obj_property name="AnalogHorizLine">0.000000</obj_property>
+         <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_loopback/dut_rx/u_qpsk_stream_demo/gardner_sync_inst/interpolate_filter_inst/f3_I" type="array">
+         <obj_property name="ElementShortName">f3_I[16:0]</obj_property>
+         <obj_property name="ObjectShortName">f3_I[16:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         <obj_property name="CellHeight">100</obj_property>
+         <obj_property name="AnalogYRangeType">ANALOG_YRANGETYPE_AUTO</obj_property>
+         <obj_property name="AnalogYRangeMin">0.000000</obj_property>
+         <obj_property name="AnalogYRRangeMax">0.000000</obj_property>
+         <obj_property name="AnalogInterpolation">ANALOG_INTERPOLATION_HOLD</obj_property>
+         <obj_property name="AnalogOffscale">ANALOG_OFFSCALE_HIDE</obj_property>
+         <obj_property name="AnalogHorizLine">0.000000</obj_property>
+         <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_loopback/dut_rx/u_qpsk_stream_demo/gardner_sync_inst/interpolate_filter_inst/f1_Q" type="array">
+         <obj_property name="ElementShortName">f1_Q[16:0]</obj_property>
+         <obj_property name="ObjectShortName">f1_Q[16:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         <obj_property name="CellHeight">100</obj_property>
+         <obj_property name="AnalogYRangeType">ANALOG_YRANGETYPE_AUTO</obj_property>
+         <obj_property name="AnalogYRangeMin">0.000000</obj_property>
+         <obj_property name="AnalogYRRangeMax">0.000000</obj_property>
+         <obj_property name="AnalogInterpolation">ANALOG_INTERPOLATION_HOLD</obj_property>
+         <obj_property name="AnalogOffscale">ANALOG_OFFSCALE_HIDE</obj_property>
+         <obj_property name="AnalogHorizLine">0.000000</obj_property>
+         <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_loopback/dut_rx/u_qpsk_stream_demo/gardner_sync_inst/interpolate_filter_inst/f2_Q" type="array">
+         <obj_property name="ElementShortName">f2_Q[16:0]</obj_property>
+         <obj_property name="ObjectShortName">f2_Q[16:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         <obj_property name="CellHeight">100</obj_property>
+         <obj_property name="AnalogYRangeType">ANALOG_YRANGETYPE_AUTO</obj_property>
+         <obj_property name="AnalogYRangeMin">0.000000</obj_property>
+         <obj_property name="AnalogYRRangeMax">0.000000</obj_property>
+         <obj_property name="AnalogInterpolation">ANALOG_INTERPOLATION_HOLD</obj_property>
+         <obj_property name="AnalogOffscale">ANALOG_OFFSCALE_HIDE</obj_property>
+         <obj_property name="AnalogHorizLine">0.000000</obj_property>
+         <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_loopback/dut_rx/u_qpsk_stream_demo/gardner_sync_inst/interpolate_filter_inst/f3_Q" type="array">
+         <obj_property name="ElementShortName">f3_Q[16:0]</obj_property>
+         <obj_property name="ObjectShortName">f3_Q[16:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         <obj_property name="CellHeight">100</obj_property>
+         <obj_property name="AnalogYRangeType">ANALOG_YRANGETYPE_AUTO</obj_property>
+         <obj_property name="AnalogYRangeMin">0.000000</obj_property>
+         <obj_property name="AnalogYRRangeMax">0.000000</obj_property>
+         <obj_property name="AnalogInterpolation">ANALOG_INTERPOLATION_HOLD</obj_property>
+         <obj_property name="AnalogOffscale">ANALOG_OFFSCALE_HIDE</obj_property>
+         <obj_property name="AnalogHorizLine">0.000000</obj_property>
+         <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_loopback/dut_rx/u_qpsk_stream_demo/gardner_sync_inst/interpolate_filter_inst/mult_result_f1_1_I" type="array">
+         <obj_property name="ElementShortName">mult_result_f1_1_I[32:0]</obj_property>
+         <obj_property name="ObjectShortName">mult_result_f1_1_I[32:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         <obj_property name="CellHeight">100</obj_property>
+         <obj_property name="AnalogYRangeType">ANALOG_YRANGETYPE_AUTO</obj_property>
+         <obj_property name="AnalogYRangeMin">0.000000</obj_property>
+         <obj_property name="AnalogYRRangeMax">0.000000</obj_property>
+         <obj_property name="AnalogInterpolation">ANALOG_INTERPOLATION_HOLD</obj_property>
+         <obj_property name="AnalogOffscale">ANALOG_OFFSCALE_HIDE</obj_property>
+         <obj_property name="AnalogHorizLine">0.000000</obj_property>
+         <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_loopback/dut_rx/u_qpsk_stream_demo/gardner_sync_inst/interpolate_filter_inst/mult_result_f1_2_I" type="array">
+         <obj_property name="ElementShortName">mult_result_f1_2_I[32:0]</obj_property>
+         <obj_property name="ObjectShortName">mult_result_f1_2_I[32:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         <obj_property name="CellHeight">100</obj_property>
+         <obj_property name="AnalogYRangeType">ANALOG_YRANGETYPE_AUTO</obj_property>
+         <obj_property name="AnalogYRangeMin">0.000000</obj_property>
+         <obj_property name="AnalogYRRangeMax">0.000000</obj_property>
+         <obj_property name="AnalogInterpolation">ANALOG_INTERPOLATION_HOLD</obj_property>
+         <obj_property name="AnalogOffscale">ANALOG_OFFSCALE_HIDE</obj_property>
+         <obj_property name="AnalogHorizLine">0.000000</obj_property>
+         <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_loopback/dut_rx/u_qpsk_stream_demo/gardner_sync_inst/interpolate_filter_inst/mult_result_f2_1_I" type="array">
+         <obj_property name="ElementShortName">mult_result_f2_1_I[32:0]</obj_property>
+         <obj_property name="ObjectShortName">mult_result_f2_1_I[32:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         <obj_property name="CellHeight">100</obj_property>
+         <obj_property name="AnalogYRangeType">ANALOG_YRANGETYPE_AUTO</obj_property>
+         <obj_property name="AnalogYRangeMin">0.000000</obj_property>
+         <obj_property name="AnalogYRRangeMax">0.000000</obj_property>
+         <obj_property name="AnalogInterpolation">ANALOG_INTERPOLATION_HOLD</obj_property>
+         <obj_property name="AnalogOffscale">ANALOG_OFFSCALE_HIDE</obj_property>
+         <obj_property name="AnalogHorizLine">0.000000</obj_property>
+         <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_loopback/dut_rx/u_qpsk_stream_demo/gardner_sync_inst/interpolate_filter_inst/mult_result_f1_1_Q" type="array">
+         <obj_property name="ElementShortName">mult_result_f1_1_Q[32:0]</obj_property>
+         <obj_property name="ObjectShortName">mult_result_f1_1_Q[32:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         <obj_property name="CellHeight">100</obj_property>
+         <obj_property name="AnalogYRangeType">ANALOG_YRANGETYPE_AUTO</obj_property>
+         <obj_property name="AnalogYRangeMin">0.000000</obj_property>
+         <obj_property name="AnalogYRRangeMax">0.000000</obj_property>
+         <obj_property name="AnalogInterpolation">ANALOG_INTERPOLATION_HOLD</obj_property>
+         <obj_property name="AnalogOffscale">ANALOG_OFFSCALE_HIDE</obj_property>
+         <obj_property name="AnalogHorizLine">0.000000</obj_property>
+         <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_loopback/dut_rx/u_qpsk_stream_demo/gardner_sync_inst/interpolate_filter_inst/mult_result_f1_2_Q" type="array">
+         <obj_property name="ElementShortName">mult_result_f1_2_Q[32:0]</obj_property>
+         <obj_property name="ObjectShortName">mult_result_f1_2_Q[32:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         <obj_property name="CellHeight">100</obj_property>
+         <obj_property name="AnalogYRangeType">ANALOG_YRANGETYPE_AUTO</obj_property>
+         <obj_property name="AnalogYRangeMin">0.000000</obj_property>
+         <obj_property name="AnalogYRRangeMax">0.000000</obj_property>
+         <obj_property name="AnalogInterpolation">ANALOG_INTERPOLATION_HOLD</obj_property>
+         <obj_property name="AnalogOffscale">ANALOG_OFFSCALE_HIDE</obj_property>
+         <obj_property name="AnalogHorizLine">0.000000</obj_property>
+         <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_loopback/dut_rx/u_qpsk_stream_demo/gardner_sync_inst/interpolate_filter_inst/mult_result_f2_1_Q" type="array">
+         <obj_property name="ElementShortName">mult_result_f2_1_Q[32:0]</obj_property>
+         <obj_property name="ObjectShortName">mult_result_f2_1_Q[32:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         <obj_property name="CellHeight">100</obj_property>
+         <obj_property name="AnalogYRangeType">ANALOG_YRANGETYPE_AUTO</obj_property>
+         <obj_property name="AnalogYRangeMin">0.000000</obj_property>
+         <obj_property name="AnalogYRRangeMax">0.000000</obj_property>
+         <obj_property name="AnalogInterpolation">ANALOG_INTERPOLATION_HOLD</obj_property>
+         <obj_property name="AnalogOffscale">ANALOG_OFFSCALE_HIDE</obj_property>
+         <obj_property name="AnalogHorizLine">0.000000</obj_property>
+         <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      </wvobject>
+   </wvobject>
+</wave_config>

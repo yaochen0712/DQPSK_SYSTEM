@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="900" viewBox="0 0 1500 900">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#263238"/>
+    </marker>
+    <style>
+      .title { font: 700 30px "Microsoft YaHei", "Noto Sans CJK SC", Arial, sans-serif; fill: #102027; }
+      .subtitle { font: 16px "Microsoft YaHei", "Noto Sans CJK SC", Arial, sans-serif; fill: #546e7a; }
+      .box { fill: #f8fbfd; stroke: #34515e; stroke-width: 2; rx: 8; }
+      .box-blue { fill: #e3f2fd; stroke: #1565c0; stroke-width: 2; rx: 8; }
+      .box-green { fill: #e8f5e9; stroke: #2e7d32; stroke-width: 2; rx: 8; }
+      .box-orange { fill: #fff3e0; stroke: #ef6c00; stroke-width: 2; rx: 8; }
+      .box-red { fill: #ffebee; stroke: #c62828; stroke-width: 2; rx: 8; }
+      .box-purple { fill: #f3e5f5; stroke: #6a1b9a; stroke-width: 2; rx: 8; }
+      .note { fill: #ffffff; stroke: #90a4ae; stroke-width: 1.5; rx: 8; }
+      .label { font: 700 17px "Microsoft YaHei", "Noto Sans CJK SC", Arial, sans-serif; fill: #102027; }
+      .small { font: 14px "Microsoft YaHei", "Noto Sans CJK SC", Arial, sans-serif; fill: #263238; }
+      .tiny { font: 12px "Microsoft YaHei", "Noto Sans CJK SC", Arial, sans-serif; fill: #455a64; }
+      .wire { stroke: #263238; stroke-width: 2.4; fill: none; marker-end: url(#arrow); }
+      .wire-soft { stroke: #607d8b; stroke-width: 2; fill: none; marker-end: url(#arrow); }
+      .feedback { stroke: #c62828; stroke-width: 2.8; fill: none; marker-end: url(#arrow); }
+      .axis { stroke: #b0bec5; stroke-width: 1.2; }
+      .dash { stroke-dasharray: 8 6; }
+    </style>
+  </defs>
+
+  <rect width="1500" height="900" fill="#ffffff"/>
+  <text x="58" y="58" class="title">RX 接收端 Gardner 定时恢复环路示意图</text>
+  <text x="60" y="86" class="subtitle">对应 gardner_sync: 匹配滤波 I/Q → Farrow 插值 → Gardner TED/环路滤波 → 定时 NCO → uk/strobe 反馈</text>
+
+  <rect x="55" y="150" width="205" height="92" class="box"/>
+  <text x="92" y="184" class="label">匹配滤波输出</text>
+  <text x="82" y="212" class="small">demo_filtered_I/Q</text>
+  <text x="83" y="232" class="tiny">切片: [GARDNER_SLICE_MSB -: 15]</text>
+
+  <rect x="325" y="135" width="245" height="122" class="box-blue"/>
+  <text x="374" y="172" class="label">Farrow 插值滤波器</text>
+  <text x="378" y="199" class="small">interpolate_filter</text>
+  <text x="355" y="225" class="tiny">y(k)=f1·uk² + f2·uk + f3</text>
+  <text x="355" y="245" class="tiny">输出: I_y / Q_y</text>
+
+  <rect x="645" y="120" width="265" height="150" class="box-orange"/>
+  <text x="698" y="157" class="label">Gardner TED + 环路滤波</text>
+  <text x="731" y="184" class="small">gardner_ted</text>
+  <text x="675" y="211" class="tiny">error = mid · (current - previous)</text>
+  <text x="675" y="232" class="tiny">wn = wn + (error[21:8] - error_d1[21:8])</text>
+  <text x="675" y="253" class="tiny">sync_flag = samp_flag &amp; decision_reliable</text>
+
+  <rect x="1000" y="140" width="215" height="115" class="box-purple"/>
+  <text x="1069" y="176" class="label">定时 NCO</text>
+  <text x="1089" y="202" class="small">nco</text>
+  <text x="1032" y="228" class="tiny">eta = eta - wn</text>
+  <text x="1032" y="249" class="tiny">溢出产生 strobe_flag 和 uk</text>
+
+  <rect x="1290" y="135" width="160" height="122" class="box-green"/>
+  <text x="1320" y="173" class="label">判决输出</text>
+  <text x="1318" y="200" class="small">sync_out_I/Q</text>
+  <text x="1321" y="226" class="small">sync_flag</text>
+
+  <rect x="330" y="345" width="230" height="96" class="note"/>
+  <text x="360" y="378" class="label">插值控制量 uk</text>
+  <text x="358" y="407" class="small">16bit，低 15bit 为小数</text>
+  <text x="358" y="428" class="tiny">由 NCO 溢出时计算: uk ≈ 2η</text>
+
+  <rect x="645" y="345" width="265" height="115" class="note"/>
+  <text x="674" y="378" class="label">采样时刻选择</text>
+  <text x="675" y="407" class="small">strobe_flag: NCO 溢出/有效插值点</text>
+  <text x="675" y="432" class="small">strobe_cnt: 0 为最佳判决点</text>
+  <text x="675" y="453" class="tiny">0/1 交替: 判决点 与 半符号点</text>
+
+  <rect x="985" y="345" width="245" height="96" class="note"/>
+  <text x="1018" y="378" class="label">环路输出 wn</text>
+  <text x="1018" y="407" class="small">定时步进控制字</text>
+  <text x="1018" y="428" class="tiny">初值: (1&lt;&lt;16)/OVSAMP_COEF</text>
+
+  <rect x="60" y="610" width="420" height="180" class="note"/>
+  <text x="86" y="644" class="label">下板建议观察点</text>
+  <text x="88" y="676" class="small">1. o_dbg_wn: 是否收敛到稳定值</text>
+  <text x="88" y="706" class="small">2. o_dbg_strobe: 间隔是否稳定</text>
+  <text x="88" y="736" class="small">3. sync_flag: 是否每符号稳定输出一次</text>
+  <text x="88" y="766" class="small">4. demo_filtered_I/Q: 判决点是否远离 0</text>
+
+  <rect x="550" y="610" width="420" height="180" class="note"/>
+  <text x="576" y="644" class="label">典型波形判断</text>
+  <text x="578" y="676" class="small">wn 慢漂: 定时频差未完全跟住</text>
+  <text x="578" y="706" class="small">strobe 间隔跳动: 环路抖动或输入眼图差</text>
+  <text x="578" y="736" class="small">sync_flag 丢失: decision_reliable 被门限屏蔽</text>
+  <text x="578" y="766" class="small">判决点靠近 0: 采样相位或载波同步仍有问题</text>
+
+  <rect x="1040" y="610" width="390" height="180" class="note"/>
+  <text x="1066" y="644" class="label">和 Costas 的关系</text>
+  <text x="1068" y="676" class="small">Gardner 输入来自 Costas 解调后的 I/Q</text>
+  <text x="1068" y="706" class="small">载波相位没锁稳会污染定时误差</text>
+  <text x="1068" y="736" class="small">定时没锁稳也会让 Costas 鉴相更抖</text>
+  <text x="1068" y="766" class="small">调试时先看星座，再看 strobe/wn</text>
+
+  <line x1="260" y1="196" x2="313" y2="196" class="wire"/>
+  <text x="278" y="181" class="tiny">data_in_I/Q</text>
+
+  <line x1="570" y1="196" x2="633" y2="196" class="wire"/>
+  <text x="586" y="181" class="tiny">I_y / Q_y</text>
+
+  <line x1="910" y1="185" x2="988" y2="185" class="wire"/>
+  <text x="930" y="170" class="tiny">wn</text>
+
+  <line x1="1215" y1="196" x2="1278" y2="196" class="wire-soft"/>
+  <text x="1230" y="181" class="tiny">sync</text>
+
+  <path d="M1107 255 L1107 315 L445 315 L445 270" class="feedback"/>
+  <text x="705" y="303" class="small" fill="#c62828">uk 反馈给插值滤波器，调节小数采样位置</text>
+
+  <path d="M1000 235 C950 325 785 325 785 282" class="feedback"/>
+  <text x="845" y="327" class="small" fill="#c62828">strobe_flag 触发 TED 采样/更新</text>
+
+  <line x1="778" y1="270" x2="778" y2="333" class="wire-soft"/>
+  <line x1="1107" y1="255" x2="1107" y2="333" class="wire-soft"/>
+  <line x1="445" y1="315" x2="445" y2="333" class="wire-soft"/>
+
+  <line x1="55" y1="575" x2="1450" y2="575" class="axis"/>
+  <text x="58" y="602" class="subtitle">说明：上半部分是 Gardner 定时环闭环结构，下半部分是 ILA 调试观察建议。</text>
+</svg>

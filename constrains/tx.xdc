@@ -1,0 +1,28 @@
+set_property PACKAGE_PIN H16        [get_ports SYSCLK]
+set_property IOSTANDARD LVCMOS33    [get_ports SYSCLK] 
+
+set_property IOSTANDARD LVCMOS33    [get_ports rst_n]
+set_property PACKAGE_PIN F19        [get_ports rst_n]
+set_property PULLTYPE PULLUP        [get_ports rst_n]
+
+# DAC2
+set_property IOSTANDARD LVCMOS33    [get_ports {dac2_data[*]}   ]
+set_property DRIVE 16               [get_ports {dac2_data[*]}   ]
+set_property SLEW FAST              [get_ports {dac2_data[*]}   ]
+set_property PACKAGE_PIN V12        [get_ports {dac2_data[13]}  ]
+set_property PACKAGE_PIN W14        [get_ports {dac2_data[12]}  ]
+set_property PACKAGE_PIN W13        [get_ports {dac2_data[11]}  ]
+set_property PACKAGE_PIN Y16        [get_ports {dac2_data[10]}  ]
+set_property PACKAGE_PIN N15        [get_ports {dac2_data[9]}   ]
+set_property PACKAGE_PIN Y17        [get_ports {dac2_data[8]}   ]
+set_property PACKAGE_PIN N16        [get_ports {dac2_data[7]}   ]
+set_property PACKAGE_PIN P18        [get_ports {dac2_data[6]}   ]
+set_property PACKAGE_PIN R16        [get_ports {dac2_data[5]}   ]
+set_property PACKAGE_PIN N17        [get_ports {dac2_data[4]}   ]
+set_property PACKAGE_PIN R17        [get_ports {dac2_data[3]}   ]
+set_property PACKAGE_PIN U14        [get_ports {dac2_data[2]}   ]
+set_property PACKAGE_PIN P19        [get_ports {dac2_data[1]}   ]
+set_property PACKAGE_PIN U15        [get_ports {dac2_data[0]}   ]
+
+set_property PACKAGE_PIN E17        [get_ports SAMPLE_PIN]
+set_property IOSTANDARD LVCMOS33    [get_ports SAMPLE_PIN] 

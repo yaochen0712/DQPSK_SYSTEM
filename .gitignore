@@ -1,0 +1,31 @@
+# Vivado
+*.jou
+*.log
+*.backup.jou
+*.str
+*.xelab
+*.xsim
+*.pb
+*.hw
+*.ip_user_files
+*.sim
+*.cache
+*.gen
+*.runs
+*.hw_handoff
+*.srcs/utils
+xsim.dir/
+.naivete.mk
+vivado*.backup.jou
+
+# Xilinx
+*.xpr.bak
+*.xpr.lck
+
+# OS
+Thumbs.db
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
