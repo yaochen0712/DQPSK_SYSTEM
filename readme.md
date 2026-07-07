@@ -1,14 +1,14 @@
-# ZYNQ DQPSK Loopback 传输系统
+# ZYNQ DQPSK 传输系统
 
-基于 **Xilinx ZYNQ** 平台的 **QPSK/DQPSK** 数字通信环路（Loopback）FPGA 实现。
+基于 **Xilinx ZYNQ** 平台的 **DQPSK** 数字通信环路（Loopback）FPGA 实现。
 
 ## 概述
 
-本项目实现了一个完整的 QPSK 数字通信物理层环路，包含发送（TX）和接收（RX）两条链路。发送端对输入 bit 进行卷积编码、DQPSK 差分编码、成形滤波和 NCO 调制；接收端完成 Costas 载波同步、Gardner 定时同步、匹配滤波、DQPSK 差分解码和 Viterbi 卷积解码。系统采用的是自己的ZYNQ开发板，可以利用PL软核编写中频频率和配置外部时钟发生器控制系统频率。实际经过下板天线配合外部模块在433MHz射频验证传输SPDIF信号。
+本项目实现了一个完整的 QPSK 数字通信物理层环路，包含发送（TX）和接收（RX）两条链路。发送端对输入 bit 进行卷积编码、DQPSK 差分编码、成形滤波和 NCO 调制发射中频；接收端完成 Costas 载波同步、Gardner 定时同步、匹配滤波、DQPSK 差分解码和 Viterbi 卷积解码。系统采用的是自己的ZYNQ开发板，可以利用PL软核编写中频频率和配置外部时钟发生器控制系统频率。实际经过下板天线配合外部模块在433MHz射频验证传输SPDIF信号。由于本项目实际上是一个课设，固然有不完备之处欢迎探讨。
 
 ## 参考
 
-感谢 https://github.com/lauchinyuan/FPGA_QPSK-modem# 的开源工程。本工程在此基础上添加了流控和修改规范了RTL语言，添加了调整中频的接口和更加全面的Costas环参数。
+感谢 https://github.com/lauchinyuan/FPGA_QPSK-modem# lauchinyuan的开源工程。本工程在此基础上添加了流控和修改规范了RTL语言，添加了调整中频的接口和更加全面的Costas环参数。感谢打电赛时助教TQ_V855Sn的板子和部分IP制作。
 
 ## 核心特性
 
@@ -25,8 +25,8 @@
 ├── rtl/                    # RTL 源文件
 │   ├── tx_top.v            # 发送端顶层
 │   ├── rx_top.v            # 接收端顶层
-│   ├── rx_noflow_top.v     # 接收端顶层（无流控）
-│   ├── tx_noflow_top.v     # 发送端顶层（无流控）
+│   ├── rx_noflow_top.v     # 接收端顶层（无串并转换流控）
+│   ├── tx_noflow_top.v     # 发送端顶层（无串并转换流控）
 │   ├── qpsk_stream_modu.sv # QPSK 调制
 │   ├── qpsk_stream_demo.sv # QPSK 解调
 │   ├── iq_differential_codec.sv  # DQPSK 差分编解码
@@ -93,13 +93,13 @@
 - **编码**：`next_phase = prev_phase + data_phase (mod 4)`
 - **解码**：`data_phase = current_phase - prev_phase (mod 4)`
 
-DQPSK 可自动抵消接收端本振相位差导致的 0°/90°/180°/270° 固定旋转，但 IQ 交换和单路反相需在解码前做坐标修正。
+DQPSK 可自动抵消接收端本振相位差导致的 0°/90°/180°/270° 固定旋转。
 
 ### Gardner 定时同步
 
 - 带幅度阈值判决（`DECISION_THRESHOLD`），默认 64
 - 信号幅度低于阈值时 `sync_flag` 不置位，避免噪声触发后级解码
-- 阈值可通过顶层参数或 AXI 寄存器调整
+- 阈值可通过顶层参数调整，理论上更改部分逻辑也可以用AXI调整，AXI控制寄存器IP已附在工程。
 
 ### 发送采样入口
 
